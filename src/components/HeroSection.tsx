@@ -6,12 +6,12 @@ import { Bot, Cpu, Database, Network } from 'lucide-react';
 const HeroSection = () => {
   return (
     <motion.div 
-      className="relative flex flex-col items-center justify-center min-h-screen py-12 px-4 overflow-hidden"
+      className="relative flex flex-col items-center justify-center min-h-screen py-12 px-4 overflow-hidden bg-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="absolute inset-0 bg-gradient-ai opacity-30 animate-gradient-shift"></div>
+      <div className="absolute inset-0 opacity-10"></div>
       
       {/* Floating Elements */}
       <motion.div 
@@ -23,7 +23,7 @@ const HeroSection = () => {
         }}
         transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
       >
-        <Bot size={80} className="text-ai-accent" />
+        <Bot size={80} className="text-white" />
       </motion.div>
       
       <motion.div 
@@ -35,7 +35,7 @@ const HeroSection = () => {
         }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
       >
-        <Cpu size={60} className="text-blue-400" />
+        <Cpu size={60} className="text-gray-300" />
       </motion.div>
       
       <motion.div 
@@ -47,7 +47,7 @@ const HeroSection = () => {
         }}
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
       >
-        <Database size={70} className="text-ai-accent" />
+        <Database size={70} className="text-white" />
       </motion.div>
       
       <motion.div 
@@ -59,7 +59,7 @@ const HeroSection = () => {
         }}
         transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
       >
-        <Network size={65} className="text-blue-400" />
+        <Network size={65} className="text-gray-300" />
       </motion.div>
       
       {/* Content */}
@@ -70,14 +70,14 @@ const HeroSection = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <div className="rounded-full border-2 border-ai-accent p-1 overflow-hidden">
+          <div className="rounded-full border-2 border-white p-1 overflow-hidden">
             <img 
               src="/lovable-uploads/234e2824-860e-4e3f-adec-abd3b3a96e7f.png" 
               alt="Waqas Photo" 
               className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover"
             />
           </div>
-          <div className="absolute -bottom-3 -right-3 bg-ai-primary rounded-full p-2 animate-pulse">
+          <div className="absolute -bottom-3 -right-3 bg-gray-800 rounded-full p-2">
             <Bot size={24} className="text-white" />
           </div>
         </motion.div>
@@ -90,10 +90,10 @@ const HeroSection = () => {
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-2">
             <span className="text-white">Meet </span>
-            <span className="ai-text-gradient">Waqas</span>
+            <span className="text-gray-300">Waqas</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Through the Eyes of <span className="ai-text-gradient font-bold">Artificial Intelligence</span>
+            Through the Eyes of <span className="text-white font-bold">Artificial Intelligence</span>
           </p>
           <p className="text-gray-400 max-w-lg">
             Welcome to this AI-powered profile that showcases different AI's perspectives 
@@ -101,7 +101,7 @@ const HeroSection = () => {
             background, and online presence.
           </p>
           <motion.button 
-            className="mt-6 bg-gradient-to-r from-ai-accent to-ai-primary hover:opacity-90 py-3 px-8 rounded-full text-white font-medium flex items-center gap-2 mx-auto md:mx-0"
+            className="mt-6 bg-gray-800 hover:bg-gray-700 py-3 px-8 rounded-full text-white font-medium flex items-center gap-2 mx-auto md:mx-0"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById('ai-opinions')?.scrollIntoView({ behavior: 'smooth' })}

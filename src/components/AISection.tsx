@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import AICard from './AICard';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const AISection = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
   const aiPerspectives = [
     {
       aiName: "Google Gemini",
@@ -68,8 +66,8 @@ const AISection = () => {
   ];
   
   return (
-    <section id="ai-opinions" className="py-20 px-4 relative">
-      <div className="absolute inset-0 bg-gradient-radial opacity-20"></div>
+    <section id="ai-opinions" className="py-20 px-4 relative bg-gray-950">
+      <div className="absolute inset-0 opacity-20"></div>
       
       <div className="max-w-7xl mx-auto z-10 relative">
         <motion.div 
@@ -79,8 +77,8 @@ const AISection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="ai-text-gradient">AI Perspectives</span> on Waqas
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            AI Perspectives on Waqas
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Different AI systems have analyzed available data about Waqas. 
@@ -106,43 +104,13 @@ const AISection = () => {
                   details={ai.details}
                   logoUrl={ai.logoUrl}
                   color={ai.color}
+                  screenshot={ai.screenshot}
                 />
               </div>
-              
-              <motion.div 
-                className="mt-6 screenshot-container cursor-pointer"
-                whileHover={{ scale: 1.02 }}
-                onClick={() => setSelectedImage(ai.screenshot)}
-              >
-                <img 
-                  src={ai.screenshot} 
-                  alt={`${ai.aiName} analysis of Waqas`}
-                  className="w-full rounded-lg border border-gray-700"
-                />
-                <div className="screenshot-overlay flex items-center justify-center">
-                  <span className="screenshot-btn bg-ai-primary text-white px-4 py-2 rounded-md">
-                    View Full Screenshot
-                  </span>
-                </div>
-              </motion.div>
             </motion.div>
           ))}
         </div>
       </div>
-      
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-4xl bg-black/80 backdrop-blur-lg border-gray-800">
-          {selectedImage && (
-            <div className="p-2">
-              <img 
-                src={selectedImage} 
-                alt="AI Analysis Screenshot" 
-                className="w-full object-contain max-h-[80vh]"
-              />
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
