@@ -72,7 +72,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full border-2 border-white p-1 overflow-hidden">
             <img 
-              src="/lovable-uploads/de2947f2-8e0f-45d9-b244-82b492c1ca62.png" 
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_cYf4yY0G0Mg4P3dw0MkTZOOtE2uT1GJBqZtoQm2pVjvE9o51B4jXsjFj2bdFIjEzUx7wEqc5TiiUJl9CeRFkYdnE3op6bL_Zi-DLH8Amymc_AK83l77oQG0v0GxAPIminIPvn2KhBOwOrUM07wxHgLyeDWsirzGN2A_I6TaLjm2MspGPhT2d8yBbL4P/s1600/Waqas%20Photo.jpeg" 
               alt="Waqas Photo" 
               className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover"
             />
