@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import AICard from './AICard';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const AISection = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
   const aiPerspectives = [
     {
       aiName: "Google Gemini",
@@ -14,7 +17,8 @@ const AISection = () => {
         "Professional Profile: nsmdwaqas is described as a \"seasoned Supply Chain Consultant specializing in the complete product lifecycle from design to implementation\" on their about.me page.",
         "GitHub profile identifies them as a \"Consultant in India\" with experience spanning over 50 countries.",
         "Online Presence: Active on various platforms including About.me."
-      ]
+      ],
+      screenshot: "/lovable-uploads/b2edaf92-a236-48f8-b42a-041249610a20.png"
     },
     {
       aiName: "Perplexity",
@@ -27,7 +31,8 @@ const AISection = () => {
         "Holds a degree from BSA Crescent.",
         "Has developed expertise in various aspects of supply chain management throughout his career.",
         "Professional background emphasizes strategic consulting and innovative solutions within the industry."
-      ]
+      ],
+      screenshot: "/lovable-uploads/19e64faf-c6e5-4262-b767-133f1a48f03e.png"
     },
     {
       aiName: "ChatGPT",
@@ -44,7 +49,8 @@ const AISection = () => {
         "NSMD Project: Showcases college projects and experiments.",
         "SC X: Provides insights into supply chain management strategies.",
         "Currently works as a supply consultant for multinational companies, combining technical expertise with business logistics."
-      ]
+      ],
+      screenshot: "/lovable-uploads/08176041-7c58-42c2-b499-b43c1f2aea09.png"
     },
     {
       aiName: "Anthropic Claude",
@@ -57,10 +63,11 @@ const AISection = () => {
         "Interests include technology, hacking, and food, with multiple blogs covering these topics.",
         "Holds a Bachelor's Degree in Electrical & Electronics Engineering from B.S.A Crescent University, Chennai.",
         "Currently involved in supply chain management, specializing in planning and analytics."
-      ]
+      ],
+      screenshot: "/lovable-uploads/90f5a6c5-0f82-401f-8088-ae2cf5866ae3.png"
     }
   ];
-
+  
   return (
     <section id="ai-opinions" className="py-20 px-4 relative">
       <div className="absolute inset-0 bg-gradient-radial opacity-20"></div>
@@ -83,20 +90,60 @@ const AISection = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {aiPerspectives.map((ai, index) => (
-            <AICard 
+            <motion.div 
               key={ai.aiName}
-              aiName={ai.aiName}
-              summary={ai.summary}
-              details={ai.details}
-              logoUrl={ai.logoUrl}
-              color={ai.color}
-              delay={index * 0.2}
-            />
+              className="flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+            >
+              <div className="flex-1">
+                <AICard 
+                  aiName={ai.aiName}
+                  summary={ai.summary}
+                  details={ai.details}
+                  logoUrl={ai.logoUrl}
+                  color={ai.color}
+                />
+              </div>
+              
+              <motion.div 
+                className="mt-6 screenshot-container cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                onClick={() => setSelectedImage(ai.screenshot)}
+              >
+                <img 
+                  src={ai.screenshot} 
+                  alt={`${ai.aiName} analysis of Waqas`}
+                  className="w-full rounded-lg border border-gray-700"
+                />
+                <div className="screenshot-overlay flex items-center justify-center">
+                  <span className="screenshot-btn bg-ai-primary text-white px-4 py-2 rounded-md">
+                    View Full Screenshot
+                  </span>
+                </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
+      
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl bg-black/80 backdrop-blur-lg border-gray-800">
+          {selectedImage && (
+            <div className="p-2">
+              <img 
+                src={selectedImage} 
+                alt="AI Analysis Screenshot" 
+                className="w-full object-contain max-h-[80vh]"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

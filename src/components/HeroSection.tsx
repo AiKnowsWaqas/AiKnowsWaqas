@@ -35,7 +35,7 @@ const HeroSection = () => {
         }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
       >
-        <Cpu size={60} className="text-ai-highlight" />
+        <Cpu size={60} className="text-blue-400" />
       </motion.div>
       
       <motion.div 
@@ -59,7 +59,7 @@ const HeroSection = () => {
         }}
         transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
       >
-        <Network size={65} className="text-ai-highlight" />
+        <Network size={65} className="text-blue-400" />
       </motion.div>
       
       {/* Content */}

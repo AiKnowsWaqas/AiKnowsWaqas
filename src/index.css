@@ -14,16 +14,16 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 270 50% 40%;
+    --primary: 220 70% 50%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 30% 40%;
+    --secondary: 210 50% 60%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 240 5% 25%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 180 100% 50%;
+    --accent: 190 90% 50%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -37,7 +37,7 @@
 
     --sidebar-background: 240 10% 3.9%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 270 50% 40%;
+    --sidebar-primary: 220 70% 50%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 5% 25%;
     --sidebar-accent-foreground: 0 0% 98%;
@@ -61,7 +61,7 @@
   content: '';
   position: absolute;
   inset: -2px;
-  background: linear-gradient(45deg, transparent, #00FFFF, #FF00FF, transparent);
+  background: linear-gradient(45deg, transparent, #3B82F6, #06B6D4, transparent);
   z-index: -1;
   border-radius: inherit;
   animation: rotate 6s linear infinite;
@@ -82,7 +82,7 @@
 }
 
 .ai-text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-ai-accent to-ai-highlight;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-ai-accent to-blue-400;
 }
 
 .ai-border-animation {
@@ -95,11 +95,49 @@
   inset: 0;
   border: 1px solid transparent;
   border-radius: inherit;
-  background: linear-gradient(45deg, #00FFFF, transparent 40%, transparent 60%, #FF00FF) border-box;
+  background: linear-gradient(45deg, #3B82F6, transparent 40%, transparent 60%, #06B6D4) border-box;
   -webkit-mask: 
      linear-gradient(#fff 0 0) padding-box, 
      linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+.screenshot-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.screenshot-container:hover {
+  transform: scale(1.02);
+}
+
+.screenshot-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(18, 18, 18, 0.8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.screenshot-container:hover .screenshot-overlay {
+  opacity: 1;
+}
+
+.screenshot-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.screenshot-container:hover .screenshot-btn {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }

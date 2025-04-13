@@ -12,18 +12,15 @@ interface AICardProps {
   delay?: number;
 }
 
-const AICard: React.FC<AICardProps> = ({ aiName, summary, details, logoUrl, color, delay = 0 }) => {
+const AICard: React.FC<AICardProps> = ({ aiName, summary, details, logoUrl, color }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <motion.div
-      className="ai-card w-full max-w-md mx-auto"
-      initial={{ y: 50, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.5 }}
+      className="ai-card w-full h-full"
+      layout
     >
-      <div className={`p-6 rounded-lg overflow-hidden`}>
+      <div className={`p-6 rounded-lg overflow-hidden h-full flex flex-col`}>
         <div className="flex items-center gap-4 mb-4">
           <div 
             className="p-2 rounded-full flex items-center justify-center" 
@@ -64,7 +61,7 @@ const AICard: React.FC<AICardProps> = ({ aiName, summary, details, logoUrl, colo
         </motion.div>
         
         <button 
-          className={`mt-4 w-full py-2 px-4 rounded-md border border-opacity-30 flex items-center justify-center gap-2 transition-all`}
+          className={`mt-auto py-2 px-4 rounded-md border border-opacity-30 flex items-center justify-center gap-2 transition-all`}
           style={{ 
             borderColor: color,
             backgroundColor: expanded ? `${color}20` : 'transparent'
