@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import AICard from './AICard';
@@ -53,10 +52,10 @@ const AISection = () => {
       screenshot: "/lovable-uploads/08176041-7c58-42c2-b499-b43c1f2aea09.png"
     },
     {
-      aiName: "Anthropic Claude",
+      aiName: "Grok",
       logoUrl: "https://seeklogo.com/images/A/anthropic-claude-logo-C850E6433D-seeklogo.com.png",
       color: "#6001D2",
-      summary: "Claude identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
+      summary: "Grok identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
       details: [
         "Likely Mohammed Waqas, an Indian blogger and supply chain professional.",
         "Background in electrical engineering, active on various social media platforms.",

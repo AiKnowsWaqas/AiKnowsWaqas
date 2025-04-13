@@ -70,9 +70,9 @@ const HeroSection = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <div className="rounded-full border-2 border-ai-accent p-1 overflow-hidden animate-glow">
+          <div className="rounded-full border-2 border-ai-accent p-1 overflow-hidden">
             <img 
-              src="/lovable-uploads/de2947f2-8e0f-45d9-b244-82b492c1ca62.png" 
+              src="/lovable-uploads/234e2824-860e-4e3f-adec-abd3b3a96e7f.png" 
               alt="Waqas Photo" 
               className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover"
             />
