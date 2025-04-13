@@ -23,7 +23,7 @@ const Index = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-ai-dark text-white"
+      className="min-h-screen bg-black text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

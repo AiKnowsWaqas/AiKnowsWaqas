@@ -6,32 +6,6 @@ import AICard from './AICard';
 const AISection = () => {
   const aiPerspectives = [
     {
-      aiName: "Google Gemini",
-      logoUrl: "https://seeklogo.com/images/G/gemini-logo-D4E386607C-seeklogo.com.png",
-      color: "#1A73E8",
-      summary: "Google Gemini identifies nsmdwaqas as a seasoned Supply Chain Consultant from India.",
-      details: [
-        "Professional Profile: nsmdwaqas is described as a \"seasoned Supply Chain Consultant specializing in the complete product lifecycle from design to implementation\" on their about.me page.",
-        "GitHub profile identifies them as a \"Consultant in India\" with experience spanning over 50 countries.",
-        "Online Presence: Active on various platforms including About.me."
-      ],
-      screenshot: "/lovable-uploads/b2edaf92-a236-48f8-b42a-041249610a20.png"
-    },
-    {
-      aiName: "Perplexity",
-      logoUrl: "https://companieslogo.com/img/orig/PRLX.P-b73e3847.png?t=1707576099",
-      color: "#aa00ff",
-      summary: "Perplexity identifies Mohammed Waqas as a supply chain professional working at Accenture Strategy & Consulting.",
-      details: [
-        "Professional with over five years of experience in the supply chain industry.",
-        "Currently works at Accenture Strategy & Consulting, specializing in solution design.",
-        "Holds a degree from BSA Crescent.",
-        "Has developed expertise in various aspects of supply chain management throughout his career.",
-        "Professional background emphasizes strategic consulting and innovative solutions within the industry."
-      ],
-      screenshot: "/lovable-uploads/19e64faf-c6e5-4262-b767-133f1a48f03e.png"
-    },
-    {
       aiName: "ChatGPT",
       logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png",
       color: "#10A37F",
@@ -51,7 +25,7 @@ const AISection = () => {
     },
     {
       aiName: "Grok",
-      logoUrl: "https://seeklogo.com/images/A/anthropic-claude-logo-C850E6433D-seeklogo.com.png",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Grok_logo.svg/1200px-Grok_logo.svg.png",
       color: "#6001D2",
       summary: "Grok identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
       details: [
@@ -62,11 +36,37 @@ const AISection = () => {
         "Currently involved in supply chain management, specializing in planning and analytics."
       ],
       screenshot: "/lovable-uploads/90f5a6c5-0f82-401f-8088-ae2cf5866ae3.png"
+    },
+    {
+      aiName: "Google Gemini",
+      logoUrl: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_1.width-1000.format-webp.webp",
+      color: "#1A73E8",
+      summary: "Google Gemini identifies nsmdwaqas as a seasoned Supply Chain Consultant from India.",
+      details: [
+        "Professional Profile: nsmdwaqas is described as a \"seasoned Supply Chain Consultant specializing in the complete product lifecycle from design to implementation\" on their about.me page.",
+        "GitHub profile identifies them as a \"Consultant in India\" with experience spanning over 50 countries.",
+        "Online Presence: Active on various platforms including About.me."
+      ],
+      screenshot: "/lovable-uploads/b2edaf92-a236-48f8-b42a-041249610a20.png"
+    },
+    {
+      aiName: "Perplexity",
+      logoUrl: "https://assets-global.website-files.com/64f6f2c0e3f4c5a91c1e823a/656656fcf8ea989af134edb2_New%20Logo%20Purple%20(1).svg",
+      color: "#aa00ff",
+      summary: "Perplexity identifies Mohammed Waqas as a supply chain professional working at Accenture Strategy & Consulting.",
+      details: [
+        "Professional with over five years of experience in the supply chain industry.",
+        "Currently works at Accenture Strategy & Consulting, specializing in solution design.",
+        "Holds a degree from BSA Crescent.",
+        "Has developed expertise in various aspects of supply chain management throughout his career.",
+        "Professional background emphasizes strategic consulting and innovative solutions within the industry."
+      ],
+      screenshot: "/lovable-uploads/19e64faf-c6e5-4262-b767-133f1a48f03e.png"
     }
   ];
   
   return (
-    <section id="ai-opinions" className="py-20 px-4 relative bg-gray-950">
+    <section id="ai-opinions" className="py-20 px-4 relative bg-black">
       <div className="absolute inset-0 opacity-20"></div>
       
       <div className="max-w-7xl mx-auto z-10 relative">

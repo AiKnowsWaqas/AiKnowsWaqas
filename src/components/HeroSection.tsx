@@ -13,13 +13,13 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 opacity-10"></div>
       
-      {/* Floating Elements */}
+      {/* Floating Elements - moved further away */}
       <motion.div 
-        className="absolute opacity-30"
-        initial={{ x: -100, y: -100 }}
+        className="absolute opacity-30 left-10 top-10"
+        initial={{ x: -150, y: -150 }}
         animate={{ 
-          x: [-100, -80, -90, -100], 
-          y: [-100, -120, -110, -100] 
+          x: [-150, -130, -140, -150], 
+          y: [-150, -170, -160, -150] 
         }}
         transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
       >
@@ -27,11 +27,11 @@ const HeroSection = () => {
       </motion.div>
       
       <motion.div 
-        className="absolute right-20 top-20 opacity-30"
-        initial={{ x: 100, y: -50 }}
+        className="absolute right-10 top-10 opacity-30"
+        initial={{ x: 150, y: -100 }}
         animate={{ 
-          x: [100, 120, 110, 100], 
-          y: [-50, -30, -40, -50] 
+          x: [150, 170, 160, 150], 
+          y: [-100, -80, -90, -100] 
         }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
       >
@@ -39,11 +39,11 @@ const HeroSection = () => {
       </motion.div>
       
       <motion.div 
-        className="absolute left-20 bottom-20 opacity-30"
-        initial={{ x: -50, y: 100 }}
+        className="absolute left-10 bottom-10 opacity-30"
+        initial={{ x: -100, y: 150 }}
         animate={{ 
-          x: [-50, -30, -40, -50], 
-          y: [100, 120, 110, 100] 
+          x: [-100, -80, -90, -100], 
+          y: [150, 170, 160, 150] 
         }}
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
       >
@@ -51,11 +51,11 @@ const HeroSection = () => {
       </motion.div>
       
       <motion.div 
-        className="absolute right-20 bottom-20 opacity-30"
-        initial={{ x: 50, y: 100 }}
+        className="absolute right-10 bottom-10 opacity-30"
+        initial={{ x: 100, y: 150 }}
         animate={{ 
-          x: [50, 70, 60, 50], 
-          y: [100, 80, 90, 100] 
+          x: [100, 120, 110, 100], 
+          y: [150, 130, 140, 150] 
         }}
         transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
       >
@@ -72,7 +72,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full border-2 border-white p-1 overflow-hidden">
             <img 
-              src="/lovable-uploads/234e2824-860e-4e3f-adec-abd3b3a96e7f.png" 
+              src="/lovable-uploads/de2947f2-8e0f-45d9-b244-82b492c1ca62.png" 
               alt="Waqas Photo" 
               className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover"
             />
