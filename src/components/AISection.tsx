@@ -1,0 +1,104 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import AICard from './AICard';
+
+const AISection = () => {
+  const aiPerspectives = [
+    {
+      aiName: "Google Gemini",
+      logoUrl: "https://seeklogo.com/images/G/gemini-logo-D4E386607C-seeklogo.com.png",
+      color: "#1A73E8",
+      summary: "Google Gemini identifies nsmdwaqas as a seasoned Supply Chain Consultant from India.",
+      details: [
+        "Professional Profile: nsmdwaqas is described as a \"seasoned Supply Chain Consultant specializing in the complete product lifecycle from design to implementation\" on their about.me page.",
+        "GitHub profile identifies them as a \"Consultant in India\" with experience spanning over 50 countries.",
+        "Online Presence: Active on various platforms including About.me."
+      ]
+    },
+    {
+      aiName: "Perplexity",
+      logoUrl: "https://companieslogo.com/img/orig/PRLX.P-b73e3847.png?t=1707576099",
+      color: "#aa00ff",
+      summary: "Perplexity identifies Mohammed Waqas as a supply chain professional working at Accenture Strategy & Consulting.",
+      details: [
+        "Professional with over five years of experience in the supply chain industry.",
+        "Currently works at Accenture Strategy & Consulting, specializing in solution design.",
+        "Holds a degree from BSA Crescent.",
+        "Has developed expertise in various aspects of supply chain management throughout his career.",
+        "Professional background emphasizes strategic consulting and innovative solutions within the industry."
+      ]
+    },
+    {
+      aiName: "ChatGPT",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png",
+      color: "#10A37F",
+      summary: "ChatGPT identifies Waqas as an Indian blogger and electrical engineer with a B.Tech degree.",
+      details: [
+        "Indian blogger and electrical engineer with a B.Tech degree from B.S.A Crescent University in Chennai.",
+        "Founded XeuTek.inc during university, a tech startup focused on publishing technology articles.",
+        "Maintains multiple specialized blogs including:",
+        "Xeutek: A blog dedicated to hacking, cybersecurity, and ethical hacking tips.",
+        "Techebloger: Covers gadgets, technological trends, and innovations.",
+        "Halal Food Logs: Focuses on halal recipes and dining experiences.",
+        "NSMD Project: Showcases college projects and experiments.",
+        "SC X: Provides insights into supply chain management strategies.",
+        "Currently works as a supply consultant for multinational companies, combining technical expertise with business logistics."
+      ]
+    },
+    {
+      aiName: "Anthropic Claude",
+      logoUrl: "https://seeklogo.com/images/A/anthropic-claude-logo-C850E6433D-seeklogo.com.png",
+      color: "#6001D2",
+      summary: "Claude identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
+      details: [
+        "Likely Mohammed Waqas, an Indian blogger and supply chain professional.",
+        "Background in electrical engineering, active on various social media platforms.",
+        "Interests include technology, hacking, and food, with multiple blogs covering these topics.",
+        "Holds a Bachelor's Degree in Electrical & Electronics Engineering from B.S.A Crescent University, Chennai.",
+        "Currently involved in supply chain management, specializing in planning and analytics."
+      ]
+    }
+  ];
+
+  return (
+    <section id="ai-opinions" className="py-20 px-4 relative">
+      <div className="absolute inset-0 bg-gradient-radial opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto z-10 relative">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="ai-text-gradient">AI Perspectives</span> on Waqas
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Different AI systems have analyzed available data about Waqas. 
+            Explore what each one has discovered about his professional life,
+            education, and online presence.
+          </p>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {aiPerspectives.map((ai, index) => (
+            <AICard 
+              key={ai.aiName}
+              aiName={ai.aiName}
+              summary={ai.summary}
+              details={ai.details}
+              logoUrl={ai.logoUrl}
+              color={ai.color}
+              delay={index * 0.2}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AISection;
