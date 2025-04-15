@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import AICard from './AICard';
@@ -25,7 +24,7 @@ const AISection = () => {
     },
     {
       aiName: "Grok",
-      logoUrl: "https://framerusercontent.com/images/CSPiwpK3AYvF7mmXvXm3ALFg.png",
+      logoUrl: "/lovable-uploads/0f1909ea-f5a9-4fff-ad55-9c1e95fe0233.png",
       color: "#6001D2",
       summary: "Grok identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
       details: [
@@ -39,7 +38,7 @@ const AISection = () => {
     },
     {
       aiName: "Google Gemini",
-      logoUrl: "https://seeklogo.com/images/G/gemini-ai-logo-A5C95F1D00-seeklogo.com.png",
+      logoUrl: "/lovable-uploads/fd03fef4-80eb-46d3-ad37-a45266ff55a0.png",
       color: "#1A73E8",
       summary: "Google Gemini identifies nsmdwaqas as a seasoned Supply Chain Consultant from India.",
       details: [
@@ -51,7 +50,7 @@ const AISection = () => {
     },
     {
       aiName: "Perplexity",
-      logoUrl: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F47d3ee8a-8500-4857-83f1-e3e731ed0f83_1024x1024.png",
+      logoUrl: "/lovable-uploads/960653c7-1af7-400a-96b1-cc4f8ea7b9ee.png",
       color: "#aa00ff",
       summary: "Perplexity identifies Mohammed Waqas as a supply chain professional working at Accenture Strategy & Consulting.",
       details: [

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Cpu, Database, Network } from 'lucide-react';
@@ -13,7 +12,6 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 opacity-10"></div>
       
-      {/* Floating Elements - moved further away */}
       <motion.div 
         className="absolute opacity-30 left-20 top-20"
         initial={{ x: -150, y: -150 }}
@@ -62,7 +60,6 @@ const HeroSection = () => {
         <Network size={65} className="text-gray-300" />
       </motion.div>
       
-      {/* Content */}
       <div className="z-10 flex flex-col md:flex-row gap-8 items-center max-w-6xl mx-auto">
         <motion.div 
           className="relative"
@@ -70,10 +67,25 @@ const HeroSection = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          {/* Wave animation border */}
-          <div className="absolute inset-0 rounded-full animate-pulse">
-            <div className="absolute inset-0 rounded-full border-2 border-white opacity-75 animate-ping"></div>
-            <div className="absolute inset-0 rounded-full border-2 border-white opacity-50" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute inset-0 rounded-full">
+            <div className="absolute inset-0 rounded-full border-4 border-white opacity-30" 
+              style={{ 
+                animation: 'ripple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                animationDelay: '0s'
+              }} 
+            />
+            <div className="absolute inset-0 rounded-full border-4 border-white opacity-20" 
+              style={{ 
+                animation: 'ripple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                animationDelay: '0.5s'
+              }} 
+            />
+            <div className="absolute inset-0 rounded-full border-4 border-white opacity-10" 
+              style={{ 
+                animation: 'ripple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                animationDelay: '1s'
+              }} 
+            />
           </div>
           
           <div className="relative rounded-full border-2 border-white p-1 overflow-hidden">
