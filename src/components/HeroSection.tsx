@@ -15,7 +15,7 @@ const HeroSection = () => {
       
       {/* Floating Elements - moved further away */}
       <motion.div 
-        className="absolute opacity-30 left-10 top-10"
+        className="absolute opacity-30 left-20 top-20"
         initial={{ x: -150, y: -150 }}
         animate={{ 
           x: [-150, -130, -140, -150], 
@@ -70,13 +70,20 @@ const HeroSection = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <div className="rounded-full border-2 border-white p-1 overflow-hidden">
+          {/* Wave animation border */}
+          <div className="absolute inset-0 rounded-full animate-pulse">
+            <div className="absolute inset-0 rounded-full border-2 border-white opacity-75 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-white opacity-50" style={{ animationDelay: '0.5s' }}></div>
+          </div>
+          
+          <div className="relative rounded-full border-2 border-white p-1 overflow-hidden">
             <img 
               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_cYf4yY0G0Mg4P3dw0MkTZOOtE2uT1GJBqZtoQm2pVjvE9o51B4jXsjFj2bdFIjEzUx7wEqc5TiiUJl9CeRFkYdnE3op6bL_Zi-DLH8Amymc_AK83l77oQG0v0GxAPIminIPvn2KhBOwOrUM07wxHgLyeDWsirzGN2A_I6TaLjm2MspGPhT2d8yBbL4P/s1600/Waqas%20Photo.jpeg" 
               alt="Waqas Photo" 
               className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover"
             />
           </div>
+          
           <div className="absolute -bottom-3 -right-3 bg-gray-800 rounded-full p-2">
             <Bot size={24} className="text-white" />
           </div>

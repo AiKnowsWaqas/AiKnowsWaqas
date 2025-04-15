@@ -25,7 +25,7 @@ const AISection = () => {
     },
     {
       aiName: "Grok",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Grok_logo.svg/1200px-Grok_logo.svg.png",
+      logoUrl: "https://framerusercontent.com/images/CSPiwpK3AYvF7mmXvXm3ALFg.png",
       color: "#6001D2",
       summary: "Grok identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
       details: [
@@ -39,7 +39,7 @@ const AISection = () => {
     },
     {
       aiName: "Google Gemini",
-      logoUrl: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_1.width-1000.format-webp.webp",
+      logoUrl: "https://seeklogo.com/images/G/gemini-ai-logo-A5C95F1D00-seeklogo.com.png",
       color: "#1A73E8",
       summary: "Google Gemini identifies nsmdwaqas as a seasoned Supply Chain Consultant from India.",
       details: [
@@ -51,7 +51,7 @@ const AISection = () => {
     },
     {
       aiName: "Perplexity",
-      logoUrl: "https://assets-global.website-files.com/64f6f2c0e3f4c5a91c1e823a/656656fcf8ea989af134edb2_New%20Logo%20Purple%20(1).svg",
+      logoUrl: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F47d3ee8a-8500-4857-83f1-e3e731ed0f83_1024x1024.png",
       color: "#aa00ff",
       summary: "Perplexity identifies Mohammed Waqas as a supply chain professional working at Accenture Strategy & Consulting.",
       details: [
