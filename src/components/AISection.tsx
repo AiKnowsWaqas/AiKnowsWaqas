@@ -25,7 +25,7 @@ const AISection = () => {
     },
     {
       aiName: "Grok",
-      logoUrl: "/lovable-uploads/960653c7-1af7-400a-96b1-cc4f8ea7b9ee.png",
+      logoUrl: "/lovable-uploads/fd03fef4-80eb-46d3-ad37-a45266ff55a0.png", // Swapped with Perplexity
       color: "#6001D2",
       summary: "Grok identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
       details: [
@@ -38,8 +38,8 @@ const AISection = () => {
       screenshot: "/lovable-uploads/90f5a6c5-0f82-401f-8088-ae2cf5866ae3.png"
     },
     {
-      aiName: "Google Gemini",
-      logoUrl: "/lovable-uploads/0f1909ea-f5a9-4fff-ad55-9c1e95fe0233.png",
+      aiName: "Gemini",
+      logoUrl: "/lovable-uploads/960653c7-1af7-400a-96b1-cc4f8ea7b9ee.png", // Swapped with Grok
       color: "#1A73E8",
       summary: "Google Gemini identifies nsmdwaqas as a seasoned Supply Chain Consultant from India.",
       details: [
@@ -51,7 +51,7 @@ const AISection = () => {
     },
     {
       aiName: "Perplexity",
-      logoUrl: "/lovable-uploads/fd03fef4-80eb-46d3-ad37-a45266ff55a0.png",
+      logoUrl: "/lovable-uploads/0f1909ea-f5a9-4fff-ad55-9c1e95fe0233.png", // Swapped with Gemini
       color: "#aa00ff",
       summary: "Perplexity identifies Mohammed Waqas as a supply chain professional working at Accenture Strategy & Consulting.",
       details: [

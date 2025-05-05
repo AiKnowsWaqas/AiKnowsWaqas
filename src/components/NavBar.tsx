@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Bot, Menu, X } from 'lucide-react';
+import { Bot, Menu, X, Connect, MoreHorizontal } from 'lucide-react';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -22,9 +22,8 @@ const NavBar = () => {
   }, [scrolled]);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'AI Perspectives', href: '#ai-opinions' },
-    { name: 'AI Consensus', href: '#ai-consensus' },
+    { name: 'Connect', href: 'https://famous-taffy-e97f7f.netlify.app/', external: true },
+    { name: 'More', href: 'https://nsmdwaqas.github.io/', external: true },
   ];
 
   return (
@@ -39,7 +38,7 @@ const NavBar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2">
           <Bot className="h-6 w-6 text-white" />
-          <span className="font-bold text-xl">Waqas AI Mirror</span>
+          <span className="font-bold text-xl">nsmdwaqas</span>
         </a>
         
         {/* Desktop Navigation */}
@@ -48,6 +47,8 @@ const NavBar = () => {
             <a 
               key={link.name}
               href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
               className="text-gray-300 hover:text-white transition-colors"
             >
               {link.name}
@@ -78,6 +79,8 @@ const NavBar = () => {
               <a 
                 key={link.name}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className="text-gray-300 py-2 hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
