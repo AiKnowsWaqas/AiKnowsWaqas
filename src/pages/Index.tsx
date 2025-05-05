@@ -1,38 +1,21 @@
 
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import AISection from '@/components/AISection';
 import SimilaritiesSection from '@/components/SimilaritiesSection';
 import Footer from '@/components/Footer';
+import NavBar from '@/components/NavBar';
 
 const Index = () => {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start({
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 20,
-      },
-    });
-  }, [controls]);
-
   return (
-    <motion.div
-      className="min-h-screen bg-black text-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      <NavBar />
       <HeroSection />
       <AISection />
       <SimilaritiesSection />
       <Footer />
-    </motion.div>
+    </div>
   );
 };
 

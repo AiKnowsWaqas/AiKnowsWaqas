@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import AICard from './AICard';
@@ -24,7 +25,7 @@ const AISection = () => {
     },
     {
       aiName: "Grok",
-      logoUrl: "/lovable-uploads/fd03fef4-80eb-46d3-ad37-a45266ff55a0.png",
+      logoUrl: "/lovable-uploads/960653c7-1af7-400a-96b1-cc4f8ea7b9ee.png",
       color: "#6001D2",
       summary: "Grok identifies Mohammed Waqas as a multifaceted individual with a strong online and professional presence.",
       details: [
@@ -38,7 +39,7 @@ const AISection = () => {
     },
     {
       aiName: "Google Gemini",
-      logoUrl: "/lovable-uploads/960653c7-1af7-400a-96b1-cc4f8ea7b9ee.png",
+      logoUrl: "/lovable-uploads/0f1909ea-f5a9-4fff-ad55-9c1e95fe0233.png",
       color: "#1A73E8",
       summary: "Google Gemini identifies nsmdwaqas as a seasoned Supply Chain Consultant from India.",
       details: [
@@ -50,7 +51,7 @@ const AISection = () => {
     },
     {
       aiName: "Perplexity",
-      logoUrl: "/lovable-uploads/0f1909ea-f5a9-4fff-ad55-9c1e95fe0233.png",
+      logoUrl: "/lovable-uploads/fd03fef4-80eb-46d3-ad37-a45266ff55a0.png",
       color: "#aa00ff",
       summary: "Perplexity identifies Mohammed Waqas as a supply chain professional working at Accenture Strategy & Consulting.",
       details: [
@@ -65,8 +66,8 @@ const AISection = () => {
   ];
   
   return (
-    <section id="ai-opinions" className="py-20 px-4 relative bg-black">
-      <div className="absolute inset-0 opacity-20"></div>
+    <section id="ai-opinions" className="py-24 px-4 relative bg-gradient-to-b from-black to-gray-900">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-40"></div>
       
       <div className="max-w-7xl mx-auto z-10 relative">
         <motion.div 
@@ -76,10 +77,10 @@ const AISection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
             AI Perspectives on Waqas
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
             Different AI systems have analyzed available data about Waqas. 
             Explore what each one has discovered about his professional life,
             education, and online presence.
@@ -90,22 +91,19 @@ const AISection = () => {
           {aiPerspectives.map((ai, index) => (
             <motion.div 
               key={ai.aiName}
-              className="flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
+              transition={{ delay: index * 0.15, duration: 0.5 }}
             >
-              <div className="flex-1">
-                <AICard 
-                  aiName={ai.aiName}
-                  summary={ai.summary}
-                  details={ai.details}
-                  logoUrl={ai.logoUrl}
-                  color={ai.color}
-                  screenshot={ai.screenshot}
-                />
-              </div>
+              <AICard 
+                aiName={ai.aiName}
+                summary={ai.summary}
+                details={ai.details}
+                logoUrl={ai.logoUrl}
+                color={ai.color}
+                screenshot={ai.screenshot}
+              />
             </motion.div>
           ))}
         </div>
