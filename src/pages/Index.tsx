@@ -7,13 +7,13 @@ import SimilaritiesSection from '@/components/SimilaritiesSection';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 import ParticleBackground from '@/components/ParticleBackground';
-import CursorTrail from '@/components/CursorTrail';
+import CursorEffect from '@/components/CursorEffect';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       <ParticleBackground />
-      <CursorTrail />
+      <CursorEffect />
       <NavBar />
       <HeroSection />
       <AISection />
