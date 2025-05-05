@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Bot, Menu, X, Connect, MoreHorizontal } from 'lucide-react';
+import { Bot, Menu, X, Link, MoreHorizontal } from 'lucide-react';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
