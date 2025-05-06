@@ -11,14 +11,18 @@ import CursorEffect from '@/components/CursorEffect';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white relative">
-      <ParticleBackground />
-      <CursorEffect />
-      <NavBar />
-      <HeroSection />
-      <AISection />
-      <SimilaritiesSection />
-      <Footer />
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <ParticleBackground />
+      </div>
+      <div className="relative z-10">
+        <CursorEffect />
+        <NavBar />
+        <HeroSection />
+        <AISection />
+        <SimilaritiesSection />
+        <Footer />
+      </div>
     </div>
   );
 };

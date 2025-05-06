@@ -1,21 +1,27 @@
 
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
 import type { Engine } from 'tsparticles-engine';
 
 const ParticleBackground: React.FC = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
+    console.log("Initializing tsparticles engine");
     await loadSlim(engine);
+  }, []);
+
+  useEffect(() => {
+    console.log("ParticleBackground component mounted");
   }, []);
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      className="fixed inset-0 w-full h-full -z-10"
+      className="fixed inset-0 w-full h-full"
+      style={{ zIndex: 0 }}
       options={{
-        fpsLimit: 60,
+        fpsLimit: 120,
         interactivity: {
           events: {
             onClick: {
@@ -45,13 +51,13 @@ const ParticleBackground: React.FC = () => {
         },
         particles: {
           color: {
-            value: ["#9b87f5", "#7E69AB", "#D6BCFA", "#8B5CF6", "#E5DEFF"],
+            value: ["#ffffff", "#a855f7", "#ec4899", "#3b82f6", "#06b6d4"],
           },
           links: {
-            color: "#9b87f5",
+            color: "#ffffff",
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.7,
             width: 2,
           },
           move: {
@@ -60,8 +66,8 @@ const ParticleBackground: React.FC = () => {
             outModes: {
               default: "bounce",
             },
-            random: true,
-            speed: 2,
+            random: false,
+            speed: 3,
             straight: false,
           },
           number: {
@@ -69,10 +75,10 @@ const ParticleBackground: React.FC = () => {
               enable: true,
               area: 800,
             },
-            value: 100,
+            value: 120,
           },
           opacity: {
-            value: 0.7,
+            value: 0.8,
           },
           shape: {
             type: "circle",
@@ -82,7 +88,9 @@ const ParticleBackground: React.FC = () => {
           },
         },
         detectRetina: true,
-        fullScreen: false,
+        fullScreen: {
+          enable: false,
+        },
         background: {
           color: {
             value: "transparent"
