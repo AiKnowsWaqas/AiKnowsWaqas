@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Menu, X, Link, MoreHorizontal } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,13 +29,17 @@ const NavBar = () => {
   return (
     <motion.header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/80 backdrop-blur-md py-2 shadow-md' : 'bg-transparent py-4'
-      }`}
+        scrolled ? 'bg-black/50 backdrop-blur-md py-2 shadow-md' : 'bg-transparent py-4'
+      } relative overflow-hidden`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="absolute inset-0 z-0">
+        <ParticleBackground />
+      </div>
+      
+      <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
         <a href="#" className="flex items-center gap-2">
           <Bot className="h-6 w-6 text-white" />
           <span className="font-bold text-xl">nsmdwaqas</span>
@@ -69,7 +73,7 @@ const NavBar = () => {
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
         <motion.div 
-          className="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-md py-4"
+          className="md:hidden absolute top-full left-0 right-0 bg-gray-900/80 backdrop-blur-md shadow-md py-4 z-10"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

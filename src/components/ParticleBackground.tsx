@@ -18,8 +18,7 @@ const ParticleBackground: React.FC = () => {
     <Particles
       id="tsparticles"
       init={particlesInit}
-      className="fixed inset-0 w-full h-full"
-      style={{ zIndex: 0 }}
+      className="w-full h-full"
       options={{
         fpsLimit: 120,
         interactivity: {
@@ -58,7 +57,7 @@ const ParticleBackground: React.FC = () => {
             distance: 150,
             enable: true,
             opacity: 0.7,
-            width: 2,
+            width: 1.5,
           },
           move: {
             direction: "none",
@@ -67,7 +66,7 @@ const ParticleBackground: React.FC = () => {
               default: "bounce",
             },
             random: false,
-            speed: 3,
+            speed: 2,
             straight: false,
           },
           number: {
@@ -75,7 +74,7 @@ const ParticleBackground: React.FC = () => {
               enable: true,
               area: 800,
             },
-            value: 120,
+            value: 80,
           },
           opacity: {
             value: 0.8,
@@ -84,7 +83,7 @@ const ParticleBackground: React.FC = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 },
           },
         },
         detectRetina: true,

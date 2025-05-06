@@ -12,16 +12,47 @@ import CursorEffect from '@/components/CursorEffect';
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <ParticleBackground />
+      <CursorEffect />
+      <NavBar />
+      
+      {/* Hero Section with Particles */}
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <ParticleBackground />
+        </div>
+        <div className="relative z-10">
+          <HeroSection />
+        </div>
       </div>
-      <div className="relative z-10">
-        <CursorEffect />
-        <NavBar />
-        <HeroSection />
-        <AISection />
-        <SimilaritiesSection />
-        <Footer />
+      
+      {/* AI Section with Particles */}
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <ParticleBackground />
+        </div>
+        <div className="relative z-10">
+          <AISection />
+        </div>
+      </div>
+      
+      {/* Similarities Section with Particles */}
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <ParticleBackground />
+        </div>
+        <div className="relative z-10">
+          <SimilaritiesSection />
+        </div>
+      </div>
+      
+      {/* Footer with Particles */}
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <ParticleBackground />
+        </div>
+        <div className="relative z-10">
+          <Footer />
+        </div>
       </div>
     </div>
   );

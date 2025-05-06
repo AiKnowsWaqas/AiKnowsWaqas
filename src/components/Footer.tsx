@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Globe, Twitter, Bot } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const Footer = () => {
   const socialLinks = [
@@ -12,8 +13,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="pt-16 pb-8 px-4 border-t border-gray-800 bg-black">
-      <div className="max-w-6xl mx-auto">
+    <footer className="pt-16 pb-8 px-4 border-t border-gray-800 bg-black/70 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <ParticleBackground />
+      </div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
           <motion.div 
             className="text-center md:text-left"
