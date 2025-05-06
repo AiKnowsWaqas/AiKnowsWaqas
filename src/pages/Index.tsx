@@ -11,16 +11,16 @@ import CursorEffect from '@/components/CursorEffect';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
-      {/* Single ParticleBackground for the entire page */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white relative">
+      {/* Single ParticleBackground that covers the entire viewport */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <ParticleBackground />
       </div>
       
       <CursorEffect />
       <NavBar />
       
-      {/* Content sections */}
+      {/* Content sections with higher z-index */}
       <div className="relative z-10">
         <HeroSection />
         <AISection />

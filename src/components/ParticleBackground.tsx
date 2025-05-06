@@ -20,7 +20,7 @@ const ParticleBackground: React.FC = () => {
       init={particlesInit}
       className="w-full h-full"
       options={{
-        fpsLimit: 120,
+        fpsLimit: 60,
         fullScreen: {
           enable: false,
           zIndex: -1
@@ -54,14 +54,18 @@ const ParticleBackground: React.FC = () => {
         },
         particles: {
           color: {
-            value: ["#ffffff", "#a855f7", "#ec4899", "#3b82f6", "#06b6d4"],
+            value: ["#ffffff", "#9b87f5", "#7E69AB", "#33C3F0", "#1EAEDB"],
           },
           links: {
-            color: "#ffffff",
+            color: "#9b87f5",
             distance: 150,
             enable: true,
             opacity: 0.7,
             width: 1.5,
+            triangles: {
+              enable: false,
+              opacity: 0.1
+            }
           },
           move: {
             direction: "none",
@@ -70,7 +74,7 @@ const ParticleBackground: React.FC = () => {
               default: "bounce",
             },
             random: false,
-            speed: 2,
+            speed: 1.5,
             straight: false,
           },
           number: {
@@ -78,10 +82,10 @@ const ParticleBackground: React.FC = () => {
               enable: true,
               area: 800,
             },
-            value: 100, // Increased number of particles
+            value: 120, // Increased number of particles for better visibility
           },
           opacity: {
-            value: 0.8,
+            value: 0.9, // Increased opacity for better visibility
           },
           shape: {
             type: "circle",

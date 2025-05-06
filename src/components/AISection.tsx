@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import AICard from './AICard';
@@ -66,7 +65,7 @@ const AISection = () => {
   ];
   
   return (
-    <section id="ai-opinions" className="py-24 px-4 relative bg-gradient-to-b from-black to-gray-900">
+    <section id="ai-opinions" className="py-24 px-4 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-40"></div>
       
       <div className="max-w-7xl mx-auto z-10 relative">

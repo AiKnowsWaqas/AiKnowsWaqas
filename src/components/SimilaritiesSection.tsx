@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
@@ -40,7 +39,7 @@ const SimilaritiesSection = () => {
   ];
 
   return (
-    <section id="ai-consensus" className="py-24 px-4 relative bg-gradient-to-b from-gray-900 to-black">
+    <section id="ai-consensus" className="py-24 px-4 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent opacity-40"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
