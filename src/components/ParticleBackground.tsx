@@ -21,6 +21,10 @@ const ParticleBackground: React.FC = () => {
       className="w-full h-full"
       options={{
         fpsLimit: 120,
+        fullScreen: {
+          enable: false,
+          zIndex: -1
+        },
         interactivity: {
           events: {
             onClick: {
@@ -74,7 +78,7 @@ const ParticleBackground: React.FC = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 100, // Increased number of particles
           },
           opacity: {
             value: 0.8,
@@ -87,13 +91,11 @@ const ParticleBackground: React.FC = () => {
           },
         },
         detectRetina: true,
-        fullScreen: {
-          enable: false,
-        },
         background: {
           color: {
             value: "transparent"
           },
+          opacity: 0,
         },
       }}
     />

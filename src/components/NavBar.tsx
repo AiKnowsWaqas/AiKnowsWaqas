@@ -1,7 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Menu, X, Link, MoreHorizontal } from 'lucide-react';
-import ParticleBackground from './ParticleBackground';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,15 +30,11 @@ const NavBar = () => {
     <motion.header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-black/50 backdrop-blur-md py-2 shadow-md' : 'bg-transparent py-4'
-      } relative overflow-hidden`}
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="absolute inset-0 z-0">
-        <ParticleBackground />
-      </div>
-      
       <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
         <a href="#" className="flex items-center gap-2">
           <Bot className="h-6 w-6 text-white" />
