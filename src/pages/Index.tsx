@@ -11,7 +11,7 @@ import CursorEffect from '@/components/CursorEffect';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white relative">
       <ParticleBackground />
       <CursorEffect />
       <NavBar />
