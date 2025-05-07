@@ -10,9 +10,20 @@ interface AICardProps {
   logoUrl: string;
   color: string;
   screenshot: string;
+  externalUrl?: string;
+  externalLinkText?: string;
 }
 
-const AICard: React.FC<AICardProps> = ({ aiName, summary, details, logoUrl, color, screenshot }) => {
+const AICard: React.FC<AICardProps> = ({ 
+  aiName, 
+  summary, 
+  details, 
+  logoUrl, 
+  color, 
+  screenshot,
+  externalUrl,
+  externalLinkText 
+}) => {
   const [expanded, setExpanded] = useState(false);
   const [screenshotVisible, setScreenshotVisible] = useState(false);
   
@@ -65,16 +76,31 @@ const AICard: React.FC<AICardProps> = ({ aiName, summary, details, logoUrl, colo
                   ))}
                 </ul>
                 
-                {!screenshotVisible && (
-                  <motion.button
-                    onClick={() => setScreenshotVisible(true)}
-                    className="mb-6 flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 font-medium w-full"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <ExternalLink size={16} />
-                    <span>View Screenshot</span>
-                  </motion.button>
-                )}
+                <div className="flex flex-wrap gap-4 mb-6">
+                  {externalUrl && (
+                    <motion.a
+                      href={externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 font-medium"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <ExternalLink size={16} />
+                      <span>{externalLinkText || "External Link"}</span>
+                    </motion.a>
+                  )}
+                  
+                  {!screenshotVisible && (
+                    <motion.button
+                      onClick={() => setScreenshotVisible(true)}
+                      className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 font-medium"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <ExternalLink size={16} />
+                      <span>View Screenshot</span>
+                    </motion.button>
+                  )}
+                </div>
                 
                 <AnimatePresence>
                   {screenshotVisible && (
